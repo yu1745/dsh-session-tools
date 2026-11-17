@@ -1,12 +1,12 @@
 {
   "format": 1,
   "title": {
-    "en": "Session Tools",
-    "zh": "会话工具"
+    "en": "yu1745 DSH Plugins",
+    "zh": "yu1745 的 DSH 插件"
   },
   "description": {
-    "en": "Git-distributed DSH session tools.",
-    "zh": "通过 Git 分发的 DSH 会话工具。"
+    "en": "Git-distributed DSH plugins.",
+    "zh": "通过 Git 分发的 DSH 插件。"
   },
   "plugins": [
     {
@@ -33,6 +33,36 @@
             "type": "git",
             "url": "https://github.com/yu1745/dsh-session-tools",
             "commit": "bc3adfd7c447b95f58b7c4234e9b81a47c4738b5"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@yu1745/dsh-agy-acp",
+      "title": {
+        "en": "AGY ACP",
+        "zh": "AGY ACP"
+      },
+      "description": {
+        "en": "Antigravity ACP models, native sessions, tools and context management.",
+        "zh": "接入 Antigravity ACP 模型、原生会话、工具调用与上下文管理。"
+      },
+      "author": "yu1745",
+      "homepage": "https://github.com/yu1745/dsh-agy-acp#readme",
+      "repository": {
+        "url": "https://github.com/yu1745/dsh-agy-acp"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1794935821,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-agy-acp",
+            "commit": "9cbdee2a1741b42b1926b9fd79749836ef615a08"
           },
           "engines": {
             "dsh": "^0.2.2-rc.3"

@@ -25,10 +25,15 @@ if (!/^[a-f0-9]{40}$/.test(commit)) throw new Error('A full SHA-1 commit is requ
 const pinned = JSON.parse(git('show', `${commit}:package.json`));
 if (pinned.private === true || !pinned.dsh?.bundle) throw new Error('Pinned package must be a discoverable DSH bundle (private must not be true)');
 const icon = execFileSync('git', ['show', `${commit}:icon.svg`], { cwd: root });
+const output = resolve(root, values.output || 'market/index.json');
+let existing;
+try { existing = JSON.parse(await readFile(resolve(root, 'market/index.json'), 'utf8')); }
+catch (error) { if (error.code !== 'ENOENT') throw error; }
+if (existing && (existing.format !== 1 || !Array.isArray(existing.plugins))) throw new Error('Existing index must use market format 1');
 const index = {
   format: 1,
-  title: { en: 'Session Tools', zh: '会话工具' },
-  description: { en: 'Git-distributed DSH session tools.', zh: '通过 Git 分发的 DSH 会话工具。' },
+  title: { en: 'yu1745 DSH Plugins', zh: 'yu1745 的 DSH 插件' },
+  description: { en: 'Git-distributed DSH plugins.', zh: '通过 Git 分发的 DSH 插件。' },
   plugins: [{
     name: pinned.name,
     title: { en: 'Session Tools', zh: '会话工具' },
@@ -43,9 +48,8 @@ const index = {
       source: { type: 'git', url: url.href, commit },
       ...(pinned.engines?.dsh ? { engines: { dsh: pinned.engines.dsh } } : {}),
     }],
-  }],
+  }, ...(existing?.plugins ?? []).filter(plugin => plugin.name !== pinned.name)],
 };
-const output = resolve(root, values.output || 'market/index.json');
 await mkdir(dirname(output), { recursive: true });
 await writeFile(output, `${JSON.stringify(index, null, 2)}\n`);
 console.log(`Generated ${output} for ${pinned.name}@${pinned.version} at ${commit}`);
