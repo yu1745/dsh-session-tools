@@ -1,0 +1,32 @@
+name: Generate plugin market index
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Git tag or commit to index
+        required: true
+        default: v2.0.0
+permissions:
+  contents: read
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generate a commit-pinned Git source index
+        env:
+          MARKET_REF: ${{ inputs.ref || github.ref_name }}
+          MARKET_REPOSITORY: https://github.com/${{ github.repository }}
+        run: node scripts/generate-market-index.mjs --ref "$MARKET_REF" --repository "$MARKET_REPOSITORY" --output site/index.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plugin-market-index
+          path: site/index.json

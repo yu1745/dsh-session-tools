@@ -1,0 +1,62 @@
+{
+  "name": "@local/dsh-task-bell",
+  "version": "2.0.0",
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "web-push": "3.6.7",
+    "zod": "4.6.6",
+    "@deepseek-ai/dsh-typert-protocol": "^0.2.2-rc.3"
+  },
+  "type": "module",
+  "description": "Session tools: task notifications, independent workspaces and configurable auto-archive",
+  "license": "MIT",
+  "author": "yu1745",
+  "repository": { "type": "git", "url": "git+https://github.com/yu1745/dsh-session-tools.git" },
+  "homepage": "https://github.com/yu1745/dsh-session-tools#readme",
+  "engines": { "node": ">=22", "dsh": "^0.2.2-rc.3" },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "push.js",
+    "notification-input.js",
+    "skip.js",
+    "client.js",
+    "worker.js",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "README.md",
+    "lib"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test *.test.mjs tests/*.test.mjs",
+    "verify": "node verify.mjs",
+    "check": "pnpm run build && pnpm run test && pnpm run verify"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "esbuild": "0.28.2",
+    "react": "18.3.1"
+  }
+}

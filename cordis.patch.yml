@@ -1,0 +1,5 @@
+# Session tools: notifications, independent workspaces and auto-archive.
+- insert:
+    - id: task-bell
+      name: '@local/dsh-task-bell'
+      config: {}

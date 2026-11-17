@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.tgz
+coverage/
+site/
+.plugin-market-cache/
+.playwright-cli/
+.env
+.env.*
+!.env.example
+# lib/ is intentionally tracked: consumers do not need install-time builds.
