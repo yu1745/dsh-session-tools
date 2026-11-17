@@ -57,6 +57,18 @@
       },
       "versions": [
         {
+          "version": "1.0.1",
+          "publishTimestamp": 1794938715,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-agy-acp",
+            "commit": "bef70a873fc0f7655f7fa94ccce2590cb1dcc13e"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        },
+        {
           "version": "1.0.0",
           "publishTimestamp": 1794935821,
           "source": {
