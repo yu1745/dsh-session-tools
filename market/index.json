@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Session Tools",
+    "zh": "会话工具"
+  },
+  "description": {
+    "en": "Git-distributed DSH session tools.",
+    "zh": "通过 Git 分发的 DSH 会话工具。"
+  },
+  "plugins": [
+    {
+      "name": "@local/dsh-task-bell",
+      "title": {
+        "en": "Session Tools",
+        "zh": "会话工具"
+      },
+      "description": {
+        "en": "Task notifications, independent conversations and automatic archiving.",
+        "zh": "任务通知、独立对话与自动归档。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM1NzdjYTUiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMSAxNWE3IDcgMCAwIDEgMTQgMGMwIDggMyA3IDMgMTBIOGMwLTMgMy0yIDMtMTBaIi8+PHBhdGggZD0iTTE1IDI5aDZNMTggNlY0TTUgMTJsLTItMk0zMSAxMmwyLTIiLz48L2c+PC9zdmc+Cg==",
+      "author": "yu1745",
+      "homepage": "https://github.com/yu1745/dsh-session-tools#readme",
+      "repository": {
+        "url": "https://github.com/yu1745/dsh-session-tools"
+      },
+      "versions": [
+        {
+          "version": "2.0.0",
+          "publishTimestamp": 1794912983,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-session-tools",
+            "commit": "511bdf5956b596de5c21a22eb3ea7770840709fa"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        }
+      ]
+    }
+  ]
+}
