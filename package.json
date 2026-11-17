@@ -2,6 +2,7 @@
   "name": "@local/dsh-task-bell",
   "version": "2.0.0",
   "dependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
     "@deepseek-ai/schemastery": "^3.18.1",
     "web-push": "3.6.7",
     "zod": "4.6.6",
@@ -55,7 +56,6 @@
     "check": "pnpm run build && pnpm run test && pnpm run verify"
   },
   "devDependencies": {
-    "@deepseek-ai/cordis": "~4.1.0",
     "esbuild": "0.28.2",
     "react": "18.3.1"
   }
