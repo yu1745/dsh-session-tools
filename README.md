@@ -2,13 +2,13 @@
 
 独立的 DSH 插件：任务完成通知、不在工作区工作的独立会话目录、可调时间自动归档。运行和开发均不依赖原来的 `dsh-extensions` 仓库。
 
-为兼容既有安装，DSH package/module ID 保持 `@local/dsh-task-bell`，入口 ID 保持 `task-bell`。源码按 Git 分发维护；没有 npm 发布流程，也没有安装期间自动构建脚本。`package.json` 用作 DSH 元数据及本地开发依赖声明。预构建的 `lib/` 保留在仓库中，使用者无需在安装时构建。GitHub 目标地址为 `https://github.com/yu1745/dsh-session-tools`；公开发布前，该地址和下述 HTTPS 安装入口尚不可用。
+为兼容既有安装，DSH package/module ID 保持 `@local/dsh-task-bell`，入口 ID 保持 `task-bell`。源码按 Git 分发维护；没有 npm 发布流程，也没有安装期间自动构建脚本。`package.json` 用作 DSH 元数据及本地开发依赖声明。预构建的 `lib/` 保留在仓库中，使用者无需在安装时构建。源码仓库：[yu1745/dsh-session-tools](https://github.com/yu1745/dsh-session-tools)。
 
 ## Git 安装与实验性插件市场
 
 遵循 [DSH 官方插件索引指南](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/guide/plugin-market.zh.md) 的 format 1；索引版本的来源仅为 `git`，固定 HTTPS 仓库地址和完整 40 位提交 SHA，不使用 npm 来源。`package.json` 的 `private` 不设为 `true`，便于官方参考生成器发现本组合包。
 
-仓库发布后，可以在 DSH 中开启“自定义插件索引”实验性组合包，在“发现 → 添加索引源”填入静态 JSON 地址：
+在 DSH 中开启“自定义插件索引”实验性组合包，在“发现 → 添加索引源”填入静态 JSON 地址：
 
 ```text
 https://raw.githubusercontent.com/yu1745/dsh-session-tools/main/market/index.json
