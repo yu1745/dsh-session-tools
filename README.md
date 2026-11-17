@@ -42,7 +42,7 @@ git commit -m 'Index 2.0.1 Git release'
 需要 Node.js 22 或更高版本以及 pnpm。在本仓库根目录运行：
 
 ```sh
-pnpm install --frozen-lockfile
+pnpm install --frozen-lockfile --ignore-scripts
 pnpm run build
 pnpm run test
 pnpm run verify
