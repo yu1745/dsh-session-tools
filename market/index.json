@@ -27,12 +27,12 @@
       },
       "versions": [
         {
-          "version": "2.0.0",
-          "publishTimestamp": 1794919652,
+          "version": "2.0.1",
+          "publishTimestamp": 1794919924,
           "source": {
             "type": "git",
             "url": "https://github.com/yu1745/dsh-session-tools",
-            "commit": "58733027fdeb92cdd8d3548aaeca4419a7ac37a9"
+            "commit": "bc3adfd7c447b95f58b7c4234e9b81a47c4738b5"
           },
           "engines": {
             "dsh": "^0.2.2-rc.3"
