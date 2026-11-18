@@ -1,5 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { randomUUID } from 'node:crypto';
+import { createRequire } from 'node:module';
+import { isAbsolute } from 'node:path';
 import z from '@deepseek-ai/schemastery';
 import { createPushService } from './push.js';
 import { notificationInput, notificationEligible } from './notification-input.js';
@@ -113,7 +115,39 @@ export async function applyNotifications(ctx, config) {
   ctx.effect(() => () => { for (const res of clients) res.end(); clients.clear(); });
 }
 
+const manifestPath = '/manifest.webmanifest';
+
+export function registerPwaSingleton(ctx, loadManifest = readFrontendManifest) {
+  let body;
+  try {
+    const manifest = loadManifest();
+    body = JSON.stringify({ ...manifest, launch_handler: { ...manifest.launch_handler, client_mode: 'focus-existing' } });
+  } catch (error) {
+    ctx.logger?.warn('PWA window reuse unavailable: %s', error.code || error.message);
+    return;
+  }
+  // Keep the original URL and identity so installed apps can refresh the manifest.
+  ctx.effect(() => ctx.webServer.register({
+    kind: 'exact', path: manifestPath,
+    async resource(request) {
+      return new Response(request.method === 'HEAD' ? null : body, {
+        headers: { 'Content-Type': 'application/manifest+json', 'Cache-Control': 'no-cache' },
+      });
+    },
+  }));
+}
+
+function readFrontendManifest() {
+  // Profile bundles are installed separately from the host's frontend package.
+  const entry = process.argv[1];
+  const require = createRequire(entry && isAbsolute(entry) ? entry : import.meta.url);
+  const requireFromWebApp = createRequire(require.resolve('@deepseek-ai/dsh-web-app/package.json'));
+  const path = requireFromWebApp.resolve(`@deepseek-ai/dsh-web-frontend/dist${manifestPath}`);
+  return JSON.parse(readFileSync(path, 'utf8'));
+}
+
 export async function apply(ctx, config) {
   installIndependent(ctx, config);
+  registerPwaSingleton(ctx);
   await applyNotifications(ctx, config);
 }
