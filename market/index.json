@@ -270,6 +270,18 @@
       },
       "versions": [
         {
+          "version": "1.0.2",
+          "publishTimestamp": 1794975395,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-session-shortcuts",
+            "commit": "6441e587563509ab6c7de70c05744c60e24e8325"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        },
+        {
           "version": "1.0.1",
           "publishTimestamp": 1794974210,
           "source": {
