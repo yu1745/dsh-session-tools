@@ -179,6 +179,18 @@
       },
       "versions": [
         {
+          "version": "1.0.5",
+          "publishTimestamp": 1794974861,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-codex-fast",
+            "commit": "cd86e615bfb3f5845c88ed9513b998c5a7f9ab3e"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        },
+        {
           "version": "1.0.4",
           "publishTimestamp": 1794974512,
           "source": {
