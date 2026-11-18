@@ -93,6 +93,99 @@
           }
         }
       ]
+    },
+    {
+      "name": "@yu1745/dsh-web-reader",
+      "title": {
+        "en": "Web Reader",
+        "zh": "网页读取"
+      },
+      "description": {
+        "en": "Read rendered web pages in a browser.",
+        "zh": "通过浏览器渲染并读取网页。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM1NzdjYTUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cmVjdCB4PSI3IiB5PSI4IiB3aWR0aD0iMjIiIGhlaWdodD0iMjAiIHJ4PSIzIi8+PHBhdGggZD0iTTcgMTRoMjJtLTE3IDVoMTJtLTEyIDRoOCIvPjwvZz48L3N2Zz4K",
+      "author": "yu1745",
+      "homepage": "https://github.com/yu1745/dsh-web-reader#readme",
+      "repository": {
+        "url": "https://github.com/yu1745/dsh-web-reader"
+      },
+      "versions": [
+        {
+          "version": "1.0.1",
+          "publishTimestamp": 1794973365,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-web-reader",
+            "commit": "63c55c023c18056f3a93225b4d810805e9e77faf"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@yu1745/dsh-codex-fast",
+      "title": {
+        "en": "Codex Fast",
+        "zh": "Codex Fast"
+      },
+      "description": {
+        "en": "Switch between Normal and Fast in the Codex model menu.",
+        "zh": "在 Codex 模型菜单中切换普通和 Fast。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij48cGF0aCBkPSJNMjAgNyA5IDIwaDhsLTEgOSAxMS0xM2gtOHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY3N2I5YiIgc3Ryb2tlLXdpZHRoPSIyLjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4K",
+      "author": "yu1745",
+      "homepage": "https://github.com/yu1745/dsh-codex-fast#readme",
+      "repository": {
+        "url": "https://github.com/yu1745/dsh-codex-fast"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1794972931,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-codex-fast",
+            "commit": "ca3602138f4a7b321de0f467b2f5d0529f60481b"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@yu1745/dsh-session-shortcuts",
+      "title": {
+        "en": "Session Shortcuts",
+        "zh": "会话快捷键"
+      },
+      "description": {
+        "en": "Cycle through open sessions with keyboard shortcuts.",
+        "zh": "使用快捷键在已打开的会话之间循环切换。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij4KICA8cGF0aCBkPSJNMTAgOC41aDE0YTMgMyAwIDAgMSAzIDNNOCAxMi41aDE3YTMgMyAwIDAgMSAzIDN2OWEzIDMgMCAwIDEtMyAzSDExYTMgMyAwIDAgMS0zLTN2LTEyWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNGQ3MzljIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxwYXRoIGQ9Im0xNSAxNy41LTIuNSAyLjUgMi41IDIuNW02LTUgMi41IDIuNS0yLjUgMi41IiBmaWxsPSJub25lIiBzdHJva2U9IiMyODdlODIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=",
+      "author": "yu1745",
+      "homepage": "https://github.com/yu1745/dsh-session-shortcuts#readme",
+      "repository": {
+        "url": "https://github.com/yu1745/dsh-session-shortcuts"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1794973281,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-session-shortcuts",
+            "commit": "48e8a6671d48ea46fdda3027e323e642e5d7b527"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        }
+      ]
     }
   ]
 }

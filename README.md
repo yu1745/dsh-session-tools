@@ -4,6 +4,16 @@
 
 为兼容既有安装，DSH package/module ID 保持 `@local/dsh-task-bell`，入口 ID 保持 `task-bell`。源码按 Git 分发维护；没有 npm 发布流程，也没有安装期间自动构建脚本。`package.json` 用作 DSH 元数据及本地开发依赖声明。预构建的 `lib/` 保留在仓库中，使用者无需在安装时构建。源码仓库：[yu1745/dsh-session-tools](https://github.com/yu1745/dsh-session-tools)。
 
+## 插件源
+
+| 插件 | 功能 |
+| --- | --- |
+| 会话工具 | 任务通知、独立对话目录（原 No Workspace）和自动归档 |
+| [AGY ACP](https://github.com/yu1745/dsh-agy-acp) | Antigravity ACP 模型和原生会话 |
+| [Web Reader](https://github.com/yu1745/dsh-web-reader) | 通过浏览器渲染并读取网页 |
+| [Codex Fast](https://github.com/yu1745/dsh-codex-fast) | 在 Codex 模型的推理等级下方切换普通和 Fast |
+| [会话快捷键](https://github.com/yu1745/dsh-session-shortcuts) | 用键盘在已打开的会话之间前后循环 |
+
 ## Git 安装与实验性插件市场
 
 遵循 [DSH 官方插件索引指南](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/guide/plugin-market.zh.md) 的 format 1；索引版本的来源仅为 `git`，固定 HTTPS 仓库地址和完整 40 位提交 SHA，不使用 npm 来源。`package.json` 的 `private` 不设为 `true`，便于官方参考生成器发现本组合包。
