@@ -27,6 +27,18 @@
       },
       "versions": [
         {
+          "version": "2.0.2",
+          "publishTimestamp": 1794974179,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-session-tools",
+            "commit": "85c20af60346599b92cd17ecd7233cce086853fc"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        },
+        {
           "version": "2.0.1",
           "publishTimestamp": 1794919924,
           "source": {
@@ -56,6 +68,18 @@
         "url": "https://github.com/yu1745/dsh-agy-acp"
       },
       "versions": [
+        {
+          "version": "1.0.3",
+          "publishTimestamp": 1794974220,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-agy-acp",
+            "commit": "6450f644b363d6b2f9784b968121c8e26b087809"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        },
         {
           "version": "1.0.2",
           "publishTimestamp": 1794971595,
@@ -112,6 +136,18 @@
       },
       "versions": [
         {
+          "version": "1.0.2",
+          "publishTimestamp": 1794974190,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-web-reader",
+            "commit": "b6dbbe0551df643ae1435636efc3a3564eb2c3ca"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        },
+        {
           "version": "1.0.1",
           "publishTimestamp": 1794973365,
           "source": {
@@ -142,6 +178,18 @@
         "url": "https://github.com/yu1745/dsh-codex-fast"
       },
       "versions": [
+        {
+          "version": "1.0.2",
+          "publishTimestamp": 1794974200,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-codex-fast",
+            "commit": "95e20e210c3ba7763478b7ef6a2996049d26d5bd"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        },
         {
           "version": "1.0.1",
           "publishTimestamp": 1794973827,
@@ -185,6 +233,18 @@
         "url": "https://github.com/yu1745/dsh-session-shortcuts"
       },
       "versions": [
+        {
+          "version": "1.0.1",
+          "publishTimestamp": 1794974210,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-session-shortcuts",
+            "commit": "94dca5721319261414b7de3586748c50fd690943"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.3"
+          }
+        },
         {
           "version": "1.0.0",
           "publishTimestamp": 1794973281,
