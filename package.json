@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-task-bell",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "dependencies": {
     "@deepseek-ai/cordis": "~4.1.0",
     "@deepseek-ai/schemastery": "^3.18.1",
