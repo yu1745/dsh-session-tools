@@ -372,6 +372,18 @@
       },
       "versions": [
         {
+          "version": "1.0.3",
+          "publishTimestamp": 1795067261,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-cot-translation",
+            "commit": "28ad6d1ecba86eb783ba3972c2c8a02762198b2d"
+          },
+          "engines": {
+            "dsh": "0.2.2-rc.3"
+          }
+        },
+        {
           "version": "1.0.2",
           "publishTimestamp": 1795066505,
           "source": {
