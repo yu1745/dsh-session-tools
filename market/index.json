@@ -354,6 +354,36 @@
           }
         }
       ]
+    },
+    {
+      "name": "@yu1745/dsh-cot-translation",
+      "title": {
+        "en": "Reasoning translation with a selectable model",
+        "zh": "思考过程机器翻译（自选模型）"
+      },
+      "description": {
+        "en": "Translate expanded reasoning using a text model configured in DSH.",
+        "zh": "用 DSH 中已配置的文本模型翻译展开的思考过程。"
+      },
+      "author": "yu1745",
+      "homepage": "https://github.com/yu1745/dsh-cot-translation",
+      "repository": {
+        "url": "https://github.com/yu1745/dsh-cot-translation"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1795065700,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yu1745/dsh-cot-translation",
+            "commit": "274aab379e3f6c9383fb2f701460e726d1fadfa2"
+          },
+          "engines": {
+            "dsh": "0.2.2-rc.3"
+          }
+        }
+      ]
     }
   ]
 }
